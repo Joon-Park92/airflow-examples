@@ -13,7 +13,7 @@ default_args = {
     'retry_delay': timedelta(minutes=5),
 }
 
-dag = DAG('bash_dag', default_args=default_args, schedule_interval='@once'))
+dag = DAG('bash_dag', default_args=default_args, schedule_interval='@once')
 
 task1 = BashOperator(
     task_id='print_date',
